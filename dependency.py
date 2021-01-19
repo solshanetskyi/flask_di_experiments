@@ -4,4 +4,4 @@ from services import MyService, Repository, MySqlRepository, InMemoryRepository
 
 
 def configure_(binder):
-    binder.bind(Repository, to=InMemoryRepository, scope=singleton)
+    binder.bind(Repository, to=MySqlRepository, scope=singleton)

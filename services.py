@@ -12,13 +12,13 @@ class Repository(ABC):
 class MySqlRepository(Repository):
 
     def get_data(self) -> str:
-        return "getting data from MYSQLLLLL"
+        return "Content retrieved from MYSQLLLLL database"
 
 
 class InMemoryRepository(Repository):
 
     def get_data(self) -> str:
-        return "getting data from Memoryyyyy"
+        return "Content retrieved from InMemory database"
 
 
 class MyService:
