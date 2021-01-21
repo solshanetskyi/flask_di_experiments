@@ -9,6 +9,9 @@ verify_ssl = true
 flask = "*"
 flask-injector = "*"
 flask-restful = "*"
+pytest = "*"
+pydevd-pycharm = "*"
+injector = "*"
 
 [requires]
 python_version = "3.8"

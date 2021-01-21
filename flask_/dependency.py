@@ -1,6 +1,6 @@
 from injector import singleton
 
-from services import MyService, Repository, MySqlRepository, InMemoryRepository
+from flask_.services import Repository, MySqlRepository
 
 
 def configure_(binder):
