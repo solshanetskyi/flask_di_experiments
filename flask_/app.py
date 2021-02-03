@@ -3,7 +3,7 @@ from flask_injector import FlaskInjector
 from flask_restful import Api
 
 from flask_.dependency import configure_
-from flask_.resources import CreditCardResource
+from flask_.resources import PaymentOptionsResource, EvolveExampleResource
 
 
 def create_app():
@@ -11,7 +11,9 @@ def create_app():
 
     api = Api(app)
 
-    api.add_resource(CreditCardResource, "/credit_card")
+    api.add_resource(PaymentOptionsResource, "/")
+    api.add_resource(EvolveExampleResource, "/evolve")
+
     FlaskInjector(app=app, modules=[configure_])
 
     return app

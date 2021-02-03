@@ -6,6 +6,7 @@ Anuj Narayanan
 David Ristovski
 Dean Way
 Dharmesh Dhakan
+Dimitrios Psarrou
 Elizabeth Lovell
 Jasper vanWanrooy
 Jason Lee
@@ -18,3 +19,4 @@ Sanket Bhangale
 Sergii Olshanetskyi
 Stanislav Evseev
 Theresa Lee
+Jill SanLuis

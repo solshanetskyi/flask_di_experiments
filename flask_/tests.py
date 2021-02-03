@@ -13,9 +13,8 @@ def client():
 
 
 def test_credit_card(client):
-    credit_card = client.get("/credit_card")
+    payment_options_response = client.get("/")
 
-    print(credit_card.get_data())
+    assert 200 == payment_options_response.status_code
 
-    assert 200 == credit_card.status_code
-
+    print(payment_options_response.get_data())
