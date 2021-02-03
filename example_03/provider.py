@@ -1,5 +1,5 @@
-from example_02.interfaces import FreshBookersProvider
-from example_02.model import FreshBooker
+from example_03.interfaces import FreshBookersProvider
+from example_03.model import FreshBooker
 
 
 class CsvFreshBookersProvider(FreshBookersProvider):

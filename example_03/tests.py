@@ -1,6 +1,8 @@
-from example_02.analyser import FreshBookersAnalyser
-from example_02.interfaces import FreshBookersProvider
-from example_02.model import FreshBooker
+from injector import Injector
+
+from example_03.analyser import FreshBookersAnalyser
+from example_03.interfaces import FreshBookersProvider
+from example_03.model import FreshBooker
 
 
 class FreshBookersProviderMock(FreshBookersProvider):
@@ -17,9 +19,14 @@ class FreshBookersProviderMock(FreshBookersProvider):
         ]
 
 
+def configure(binder):
+    binder.bind(FreshBookersProvider, to=FreshBookersProviderMock)
+
+
 def test_analyser_brings_ii_to_the_bottom():
-    freshbookers_provider = FreshBookersProviderMock()
-    analyser = FreshBookersAnalyser(freshbookers_provider)
+    injector = Injector(configure)
+
+    analyser = injector.get(FreshBookersAnalyser)
 
     analyzed_freshbookers = analyser.get_top_freshbookers()
 
