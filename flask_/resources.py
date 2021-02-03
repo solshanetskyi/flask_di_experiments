@@ -6,8 +6,9 @@ from flask_.services import PaymentOptionsService
 
 class CreditCardResource(Resource):
     @inject
-    def __init__(self, service: PaymentOptionsService):
-        self.service = service
+    def __init__(self, service_: PaymentOptionsService):
+        self.service = service_
+        print("dupple pusssto")
 
     def get(self):
         return {
